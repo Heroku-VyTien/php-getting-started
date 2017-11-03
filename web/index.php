@@ -2,7 +2,10 @@
 
 require('../vendor/autoload.php');
 
-echo "Hello"; exit;
+// Connect Heroku Database
+extract(parse_url($_ENV["DATABASE_URL"]));
+var_dump("user=$user password=$pass host=$host dbname=" . substr($path, 1));
+// Connect Heroku Database
 
 $app = new Silex\Application();
 $app['debug'] = true;

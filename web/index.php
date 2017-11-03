@@ -2,6 +2,8 @@
 
 require('../vendor/autoload.php');
 
+echo "Hello"; exit;
+
 $app = new Silex\Application();
 $app['debug'] = true;
 

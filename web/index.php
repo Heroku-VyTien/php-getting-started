@@ -9,10 +9,10 @@ connectDB();
 function connectDB() {
   extract(parse_url($_ENV["DATABASE_URL"]));
   
-  $servername = $host;
-  $username = $user;
-  $password = $pass;
-  $dbname = substr($path, 1);
+  $servername = "ec2-50-19-118-164.compute-1.amazonaws.com:5432";
+  $username = "duivgyauhxqtbv";
+  $password = "8e67d8add13fbdb6b5348ecfe0df9ec1592bd6329f9ed6de437b481e3799647d";
+  $dbname = "d208ios6flp4ak";
 
 // Create connection
   $conn = mysqli_connect($servername, $username, $password);

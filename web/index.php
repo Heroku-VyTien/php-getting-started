@@ -22,7 +22,6 @@ function connectDB() {
    }
 }
 // Connect Heroku Database
-exit;
 
 $app = new Silex\Application();
 $app['debug'] = true;

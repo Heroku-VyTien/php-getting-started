@@ -3,9 +3,30 @@
 require('../vendor/autoload.php');
 
 // Connect Heroku Database
-extract(parse_url($_ENV["DATABASE_URL"]));
-var_dump("user=$user password=$pass host=$host dbname=" . substr($path, 1));
+// extract(parse_url($_ENV["DATABASE_URL"]));
+// var_dump("user=$user password=$pass host=$host dbname=" . substr($path, 1));
+connectDB();
+function connectDB() {
+  extract(parse_url($_ENV["DATABASE_URL"]));
+  
+  $servername = $host;
+  $username = $user;
+  $password = $pass;
+  $dbname = substr($path, 1);
+
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Connected successfully";
+    }
+catch(PDOException $e)
+    {
+    echo "Connection failed: " . $e->getMessage();
+    }
+}
 // Connect Heroku Database
+exit;
 
 $app = new Silex\Application();
 $app['debug'] = true;

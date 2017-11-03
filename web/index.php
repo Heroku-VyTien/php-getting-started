@@ -9,8 +9,8 @@ connectDB();
 function connectDB() {
   extract(parse_url($_ENV["DATABASE_URL"]));
   
-  $con = pg_connect("host=ec2-50-19-118-164.compute-1.amazonaws.com port=5432 dbname=d208ios6flp4ak user=duivgyauhxqtbv password=8e67d8add13fbdb6b5348ecfe0df9ec1592bd6329f9ed6de437b481e3799647d");
-
+  // $con = pg_connect("host=ec2-50-19-118-164.compute-1.amazonaws.com port=5432 dbname=d208ios6flp4ak user=duivgyauhxqtbv password=8e67d8add13fbdb6b5348ecfe0df9ec1592bd6329f9ed6de437b481e3799647d");
+  $con = pg_connect("host=$host port=5432 dbname=".substr($path, 1)." user=$user password=$pass");
 
    if (!$con) 
    {

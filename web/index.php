@@ -9,19 +9,17 @@ connectDB();
 function connectDB() {
   extract(parse_url($_ENV["DATABASE_URL"]));
   
-  $servername = "ec2-50-19-118-164.compute-1.amazonaws.com:5432";
-  $username = "duivgyauhxqtbv";
-  $password = "8e67d8add13fbdb6b5348ecfe0df9ec1592bd6329f9ed6de437b481e3799647d";
-  $dbname = "d208ios6flp4ak";
+  $con = pg_connect("host=ec2-50-19-118-164.compute-1.amazonaws.com port=5432 dbname=d208ios6flp4ak user=duivgyauhxqtbv password=8e67d8add13fbdb6b5348ecfe0df9ec1592bd6329f9ed6de437b481e3799647d");
 
-// Create connection
-  $conn = mysqli_connect($servername, $username, $password);
 
-// Check connection
-  if (!$conn) {
-      die("Connection failed: " . mysqli_connect_error());
-  }
-  echo "Connected successfully";
+   if (!$con) 
+   {
+     echo "Database connection failed.";
+   }
+   else 
+   {
+     echo "Database connection success.";
+   }
 }
 // Connect Heroku Database
 exit;

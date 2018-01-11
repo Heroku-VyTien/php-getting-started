@@ -5,6 +5,7 @@ error_reporting(0);
 
 require('../vendor/autoload.php');
 
+echo "ssssssssssss";
 
 //-------------------------- TEST MAIL ----------------------
 

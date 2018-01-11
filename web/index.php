@@ -13,7 +13,7 @@ function Send_Mail($to,$subject,$body)
     $mail->IsSMTP(true); // SMTP
     $mail->SMTPAuth   = true;  // SMTP authentication
     $mail->Mailer = "smtp";
-    $mail->Host= "tls://email-smtp.us-east.amazonaws.com"; // Amazon SES
+    $mail->Host= "tls://email-smtp.us-east-1.amazonaws.com"; // Amazon SES
     $mail->Port = 465;  // SMTP Port
     $mail->Username = "AKIAIM3HS7UUXEQ4GTPA";  // SMTP  Username
     $mail->Password = "AqF6E+ZsiPdZd+mvMhkRgiQvQH7tGH9Ky5POVQCG63qX";  // SMTP Password

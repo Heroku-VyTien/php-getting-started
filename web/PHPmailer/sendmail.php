@@ -27,4 +27,6 @@ $to = 'vytien@gmail.com';
 $subject = 'Test mail from AWS';
 $body = 'test body';
 $rst = Send_Mail($to,$subject,$body);
+if ($rst) echo "Success";
+else echo "Fail";
 ?>

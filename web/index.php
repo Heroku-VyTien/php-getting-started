@@ -11,6 +11,9 @@ echo "ssssssssssss";
 
 require '/PHPMailer/class.phpmailer.php';
 
+echo "aaaaaaaa";
+
+
 // Instantiate a new PHPMailer 
 $mail = new PHPMailer;
 

@@ -7,11 +7,11 @@ ini_set('display_startup_errors', TRUE);
 
 require('../vendor/autoload.php');
 
-echo "test mail here ";
+echo "test mail here abc";
 
 //-------------------------- TEST MAIL ----------------------
 
-require '../PHPMailer/class.phpmailer.php';
+require 'class.phpmailer.php';
 
 echo "aaaaaaaa";
 

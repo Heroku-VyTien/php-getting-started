@@ -5,11 +5,11 @@ error_reporting(0);
 
 require('../vendor/autoload.php');
 
-echo "ssssssssssss";
+echo "ttttttt";
 
 //-------------------------- TEST MAIL ----------------------
 
-require '/PHPMailer/class.phpmailer.php';
+require 'PHPMailer/class.phpmailer.php';
 
 echo "aaaaaaaa";
 

@@ -1,11 +1,13 @@
 <?php
 
-// Turn off all error reporting
-error_reporting(0);
+// Turn on all error reporting
+error_reporting(E_ALL);
+ini_set('display_errors', TRUE);
+ini_set('display_startup_errors', TRUE);
 
 require('../vendor/autoload.php');
 
-echo "ttttttt";
+echo "test mail here ";
 
 //-------------------------- TEST MAIL ----------------------
 
